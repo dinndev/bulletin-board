@@ -3,8 +3,9 @@
 <% @articles.each do |article| %>
 <h1><%= article.title %></h1>
 <p><%= article.description %></p>
-<%= button_to "Show this article", article %> <%= button_to "Delete", article,
-method: :delete %> <%= link_to "edit", edit_article_path(article) %> <% end %>
+<%= button_to "Delete", article, method: :delete %> <%= link_to "edit",
+edit_article_path(article) %> <br />
+<%= link_to "more of this article", article_path(article) %> <% end %>
 
 <br />
 <%= link_to "Create new article", '/articles/new' %>
